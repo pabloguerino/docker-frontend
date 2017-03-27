@@ -29,6 +29,6 @@ ENV NPM_PACKAGES "bower \
   zen-grids"
 
 RUN apk add --no-cache git \
-  && npm install -g $EXTRA_PACKAGES $NPM_PACKAGES
+    && npm install -g $EXTRA_PACKAGES $NPM_PACKAGES
 
 COPY docker-entrypoint.sh /usr/bin/

@@ -41,7 +41,7 @@ ENV NPM_PACKAGES "node-sass \
 RUN apk add --no-cache make g++ git python && \
     apk add --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/community libsass && \
     npm --unsafe-perm install -g webpack@$WEBPACK_VERSION LPGhatguy/node-sass-glob $EXTRA_PACKAGES $NPM_PACKAGES && \
-     apk del --purge make g++ python git
+    apk del --purge make g++ python git
 
 COPY docker-entrypoint.sh /usr/local/bin/
 ENTRYPOINT ["docker-entrypoint.sh"]
