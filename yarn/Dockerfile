@@ -1,9 +1,10 @@
-FROM mhart/alpine-node:8.2.1
-
+FROM node:8-alpine
 
 RUN apk add --no-cache make g++ python git
+RUN npm install -g yarn
 
 WORKDIR /vendor
+ENV HOME /tmp
 
 COPY docker-entrypoint.sh /usr/local/bin/
 

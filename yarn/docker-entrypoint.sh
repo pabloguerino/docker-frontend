@@ -8,5 +8,5 @@ if [ ! -d /work/node_modules ]; then
   cp -r /vendor/node_modules /work/node_modules
 fi
 
-yarn install --check-files --non-interactive --cache-folder /root/.yarn-cache
+HOME=/tmp yarn install --check-files --non-interactive --cache-folder /tmp/.yarn-cache
 exec "$@"
